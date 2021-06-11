@@ -10,8 +10,12 @@ class NavigationObserver {
         lifecycleOwner: LifecycleOwner
     ) {
         navigation.navigateTo.observe(lifecycleOwner) { directions ->
-            directions?.let {
-                navController.navigate(it)
+            try {
+                directions?.let {
+                    navController.navigate(it)
+                    navigation.onNavigationComplete()
+                }
+            } catch (exception: Exception) {
                 navigation.onNavigationComplete()
             }
         }

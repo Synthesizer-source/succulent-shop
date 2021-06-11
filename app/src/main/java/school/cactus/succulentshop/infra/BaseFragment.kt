@@ -18,7 +18,6 @@ abstract class BaseFragment : Fragment() {
     @CallSuper
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navigationObserver.observe(viewModel.navigation, findNavController(), viewLifecycleOwner)
         snackbarObserver.observe(viewModel.snackbarState, view, viewLifecycleOwner)
     }

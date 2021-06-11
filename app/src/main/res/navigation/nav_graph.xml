@@ -6,32 +6,68 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="school.cactus.succulentshop.login.LoginFragment"
+        android:name="school.cactus.succulentshop.ui.login.LoginFragment"
         android:label="LoginFragment">
         <action
             android:id="@+id/loginSuccessful"
             app:destination="@id/productListFragment"
             app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/createAccount"
+            app:destination="@id/signUpFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
 
     <fragment
+        android:id="@+id/signUpFragment"
+        android:name="school.cactus.succulentshop.ui.signup.SignUpFragment"
+        android:label="SignUpFragment">
+        <action
+            android:id="@+id/login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/signUpSuccess"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+
+
+    <fragment
         android:id="@+id/productListFragment"
-        android:name="school.cactus.succulentshop.product.list.ProductListFragment"
+        android:name="school.cactus.succulentshop.ui.product.list.ProductListFragment"
         android:label="ProductListFragment">
         <action
-            android:id="@+id/openProductDetail"
+            android:id="@+id/showProductDetail"
             app:destination="@id/productDetailFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="school.cactus.succulentshop.product.detail.ProductDetailFragment"
+        android:name="school.cactus.succulentshop.ui.product.detail.ProductDetailFragment"
         android:label="ProductDetailFragment">
         <argument
             android:name="productId"
             android:defaultValue="-1"
             app:argType="integer" />
+        <action
+            android:id="@+id/showRelatedProduct"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/showProductImage"
+            app:destination="@id/productImageFragment" />
     </fragment>
+
+    <dialog
+        android:id="@+id/productImageFragment"
+        android:name="school.cactus.succulentshop.ui.product.image.ProductImageFragment"
+        android:label="ProductImageFragment">
+        <argument
+            android:name="imageUrl"
+            android:defaultValue=""
+            app:argType="string" />
+    </dialog>
 
     <action
         android:id="@+id/tokenExpired"

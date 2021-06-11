@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="item_product_spacing">8dp</dimen>
+    <dimen name="related_product_horizontal_spacing">12dp</dimen>
+    <dimen name="related_product_image_height">128dp</dimen>
 </resources>

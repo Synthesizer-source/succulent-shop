@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Succulent Shop</string>
+    <string name="email">E-mail</string>
+    <string name="username">Username</string>
     <string name="email_or_username">Email or Username</string>
     <string name="password">Password</string>
     <string name="log_in">Log in</string>
+    <string name="sign_up">Sign Up</string>
     <string name="create_an_account">Create an account</string>
-    <string name="this_field_is_required">This field is required.</string>
-    <string name="identifier_is_too_short">Identifier is too short.</string>
+    <string name="already_have_an_account">already have an account?</string>
     <string name="add_to_cart">Add to cart</string>
-    <string name="check_your_connection">Please check your connection and try again.</string>
+    <string name="related_products">Related products:</string>
     <string name="retry">Retry</string>
-    <string name="unexpected_error_occurred">Unexpected error occurred</string>
-    <string name="your_session_is_expired">Your session is expired. Please log in.</string>
+    <string name="log_out">Log out</string>
 </resources>

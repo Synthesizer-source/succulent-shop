@@ -11,4 +11,8 @@ abstract class BaseViewModel : ViewModel() {
 
     protected val _snackbarState = MutableLiveData<SnackbarState>()
     val snackbarState: LiveData<SnackbarState> = _snackbarState
+
+    protected fun hideSnackbar() {
+        _snackbarState.value = null
+    }
 }

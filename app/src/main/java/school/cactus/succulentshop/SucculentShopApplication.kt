@@ -8,7 +8,6 @@ class SucculentShopApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         generateApi(this)
         createDatabase(this)
     }
